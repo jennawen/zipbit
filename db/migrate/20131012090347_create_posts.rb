@@ -5,6 +5,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :description
       t.string :price
       t.integer :user_id
+      t.string :secret_key
       t.timestamp
     end
   end

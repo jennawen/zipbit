@@ -1,4 +1,4 @@
-*Circle*
+*Z I P B I T*
 ====
 Your community bitcoin marketplace
 ===

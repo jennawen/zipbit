@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 20131012090809) do
     t.string  "description"
     t.string  "price"
     t.integer "user_id"
+    t.string  "secret_key"
+  end
+
+  create_table "users", force: true do |t|
+    t.string "user_name"
+    t.string "password"
   end
 
 end

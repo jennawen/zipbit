@@ -8,13 +8,24 @@ use Rack::Flash
 
 enable :sessions
 
+set :database, ENV['DATABASE_URL']
+
+
 begin 
   require 'dotenv'
   Dotenv.load
 rescue LoadError
 end
 
-set :database, ENV['DATABASE_URL']
+helpers do
+  def listings
+    @listings = Listing.all
+  end
+
+  def requested_listing
+    @requested_listing ||= Listing.find_by(secret_key: params[:secret_key])
+  end
+end
 
 helpers do
   def listings
@@ -34,15 +45,12 @@ post '/' do
   listing = Listing.create({title: params[:title], price: params[:price], description: params[:description], secret_key: SecureRandom.hex(3)})
   session[:listing_id]=listing.id
   redirect '/confirmsubmit'
+
 end
 
 
 get "/views/:secret_key" do
   erb :editlisting
-end
-
-get '/confirmsubmit' do
-  erb :confirmsubmit
 end
  
 post '/confirmedit' do
