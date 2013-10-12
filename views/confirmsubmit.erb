@@ -1,0 +1,8 @@
+<br>
+<body><br>
+  You submitted the following listing:<br>
+  Title:<%=requested_listing.title %><br>
+  Price (BTC):  <%=requested_listing.price %><br>
+  Description: <%=requested_listing.description %><br>
+  <br>
+Thank you for your submission. Please go to <a href="/views/<%=requested_listing.secret_key%>">http://zipbit.herokuapp.com/views/<%=requested_listing.secret_key%></a> to edit your listing.</body>
