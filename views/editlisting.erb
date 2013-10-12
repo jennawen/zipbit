@@ -1,0 +1,26 @@
+<h1>Edit Your Listing</h1>
+
+<form method="post" action="/confirmedit">
+<div class="field">
+    <label for="name">Title</label>
+    <input type="text" class="input" name="title" id="title" placeholder="<%=requested_listing.title %>" />
+</div>
+ 
+<div class="field">
+    <label for="price">BTC</label>
+    <input type="text" class="input" name="price" id="price" placeholder="<%=requested_listing.price %>" />
+</div>
+ 
+<div class="field">
+    <label for="description">Description:</label>
+   <input type="text" class="input" name="description" id="description" placeholder="<%=requested_listing.description %>" />
+
+    <input type="hidden" name="secret_key" value="<%=params[:secret_key] %>" />
+</div>
+
+<div >
+ 
+ <button type="submit">Confirm Edits</button>
+</form>
+
+

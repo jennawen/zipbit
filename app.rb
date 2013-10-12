@@ -4,13 +4,13 @@ require 'securerandom'
 require_relative 'models/listing'
 require_relative 'models/user'
 
-set :database, ENV['DATABASE_URL']
-
 begin 
   require 'dotenv'
   Dotenv.load
 rescue LoadError
 end
+
+set :database, ENV['DATABASE_URL']
 
 helpers do
   def listings
