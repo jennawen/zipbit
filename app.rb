@@ -13,6 +13,7 @@ rescue LoadError
 end
 
 set :database, ENV['DATABASE_URL']
+
 enable :sessions
 use Rack::Flash
 
