@@ -34,9 +34,15 @@ end
 
 post '/' do
   listing = Listing.create({title: params[:title], price: params[:price], description: params[:description], secret_key: SecureRandom.hex(3)})
-  session[:listing_id]=listing.id
-  redirect '/confirmsubmit'
+  if listing.valid?
+    session[:listing_id]=listing.id
+    redirect '/confirmsubmit'
+  else
+    flash[:error] ="Please complete all fields."
+    redirect '/'
+  end
 end
+
 
 
 get "/views/:secret_key" do
