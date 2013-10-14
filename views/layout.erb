@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="stylesheet" href="normalize.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Zipbit</title>
-  <div id="navbar">
-</head>
+  <head>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Zipbit</title>
+    <div id="navbar">
+
+      <ul>
+        <li><a href ="/">Zipbit</a></li>
+        <li><a href="/">Sign Up</a></li>
+        <li><a href="/">My Listings</a></li>
+        <li><a href="/">Login</a></li>
+      </ul>
+    </div>
+  </head>
+
   <body>
-    <ul>
-      <li><a href ="/">Zipbit</a></li>
-      <li><a href="/">Sign Up</a></li>
-      <li><a href="/">My Listings</a></li>
-      <li><a href="/">Login</a></li>
-    </ul>
-  </div><div id="mainbody">
-  <%= yield %>
-</div></body>
+    <div id="mainbody">
+      <%= yield %>
+    </div>
+  </body>
 </html>

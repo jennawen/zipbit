@@ -3,8 +3,8 @@ ruby '1.9.3'
 gem 'sinatra'
 gem 'sinatra-activerecord'
 gem 'pg'
-gem 'rack-flash3'
 
+gem 'rack-flash3'
 
 group :development, :test do 
 	gem 'rspec'
