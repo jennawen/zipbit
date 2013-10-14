@@ -1,0 +1,15 @@
+<h1>USER LOG IN<h1>
+
+<div class ="flash"><%=flash[:notice] %></div>
+<form method="post" action="/logincomplete">
+  <div class="field">
+      <label for="user_name">Username:</label>
+      <input type="text" class="input" name="user_name" id="user_name" />
+  </div>
+   
+  <div class="field">
+      <label for="password">Password:</label>
+      <input type="text" class="input" name="password" id="password" />
+  </div>
+  <button type="submit">Log In</button>
+</form>

@@ -1,11 +1,10 @@
 <h2>The community bitcoin marketplace<h2>
 <h1>Zipbit<h1>
-
-<div class="flash"><%=flash[:notice] %></div>
+<div class="body">You are currently logged in as: <%=user.user_name %></div>
 
 <h3>What would you like to contribute to the marketplace?</h3>
-
-<form method="post" action="/">
+<div class="flash_error"><%=flash[:error] %></div>
+<form method="post" action="/userlistings">
 <div class="field">
     <label for="title">Title</label>
     <input type="text" class="input" name="title" id="title" />
@@ -21,7 +20,7 @@
     <textarea class="input textarea" name="description" id="description">
     </textarea>
 </div>
-    <input type="hidden" name="user_id" value="<%=params[:user_id] %>" />
+    <!-- <input type="hidden" name="user_id" value="<%=params[:user_id] %>" /> -->
  
  <button type="submit">Submit Listing</button>
 </form>
